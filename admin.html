@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>
+        Review Management | Mercy eCommerce Specialist
+    </title>
+
+    <link
+        rel="stylesheet"
+        href="style.css"
+    >
+
+</head>
+
+<body>
+
+    <main class="admin-page">
+
+        <div class="container">
+
+            <!-- ADMIN LOGIN -->
+
+            <div
+                class="admin-login-card"
+                id="admin-login-card"
+            >
+
+                <span class="section-label">
+                    PRIVATE REVIEW MANAGEMENT
+                </span>
+
+                <h1>
+                    Admin Login
+                </h1>
+
+                <p>
+                    Sign in to manage client reviews and control
+                    which feedback appears on the website.
+                </p>
+
+
+                <form id="admin-login-form">
+
+                    <div class="admin-field">
+
+                        <label for="admin-email">
+                            Email Address
+                        </label>
+
+                        <input
+                            type="email"
+                            id="admin-email"
+                            placeholder="Enter your email"
+                            required
+                        >
+
+                    </div>
+
+
+                    <div class="admin-field">
+
+                        <label for="admin-password">
+                            Password
+                        </label>
+
+                        <input
+                            type="password"
+                            id="admin-password"
+                            placeholder="Enter your password"
+                            required
+                        >
+
+                    </div>
+
+
+                    <button
+                        type="submit"
+                        class="primary-btn admin-login-btn"
+                    >
+                        Sign In
+                        <span>→</span>
+                    </button>
+
+
+                    <p
+                        class="admin-login-error"
+                        id="admin-login-error"
+                    ></p>
+
+                </form>
+
+            </div>
+
+
+            <!-- ADMIN DASHBOARD -->
+
+            <div
+                class="admin-dashboard"
+                id="admin-dashboard"
+                style="display: none;"
+            >
+
+                <div class="admin-header">
+
+                    <span class="section-label">
+                        PRIVATE REVIEW MANAGEMENT
+                    </span>
+
+                    <h1>
+                        Client Reviews
+                    </h1>
+
+                    <p>
+                        Review submitted feedback, approve reviews
+                        for publication, and manage what appears
+                        on the website.
+                    </p>
+
+                </div>
+
+<!-- DASHBOARD STATISTICS -->
+
+<div class="admin-stats">
+
+    <div class="admin-stat-card">
+
+        <span class="admin-stat-label">
+            TOTAL REVIEWS
+        </span>
+
+        <strong id="total-reviews">
+            0
+        </strong>
+
+    </div>
+
+
+    <div class="admin-stat-card">
+
+        <span class="admin-stat-label">
+            PUBLISHED
+        </span>
+
+        <strong id="published-reviews">
+            0
+        </strong>
+
+    </div>
+
+
+    <div class="admin-stat-card">
+
+        <span class="admin-stat-label">
+            PENDING
+        </span>
+
+        <strong id="pending-reviews">
+            0
+        </strong>
+
+    </div>
+
+</div>
+
+                <div class="admin-status-card">
+
+                    <div>
+
+                        <strong>
+                            Review Management
+                        </strong>
+
+                        <p>
+                            Your submitted client reviews will appear here.
+                        </p>
+
+                    </div>
+
+
+                    <div class="admin-actions">
+
+                        <button
+                            type="button"
+                            class="secondary-btn"
+                            id="admin-logout-btn"
+                        >
+                            Log Out
+                        </button>
+
+                        <a
+                            href="index.html"
+                            class="secondary-btn"
+                        >
+                            Back to Website
+                        </a>
+
+                    </div>
+
+                </div>
+
+
+                <div
+                    class="admin-reviews"
+                    id="admin-reviews"
+                >
+
+                    <div class="admin-loading">
+                        Loading reviews...
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </main>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+
+    <script src="admin.js"></script>
+
+</body>
+
+</html>
